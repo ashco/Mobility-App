@@ -2,9 +2,15 @@
 
 const Nav = () => (
   <div>
-    <Link href="1">Link 1</Link>
-    <Link href="2">Link 2</Link>
-    <Link href="3">Link 3</Link>
+    <Link href="/1">
+      <a>Link 1</a>
+    </Link>
+    <Link href="/2">
+      <a>Link 2</a>
+    </Link>
+    <Link href="/3">
+      <a>Link 3</a>
+    </Link>
   </div>
 );
 
