@@ -1,12 +1,12 @@
 {
   "name": "mobapp-backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "author": "AshCo (https://ashco.io)",
   "license": "MIT",
   "scripts": {
-    "ts-watch": "ts-node-dev --respawn --transpileOnly ./src/server.ts",
-    "ts-build": "tsc",
+    "watch": "ts-node-dev --respawn --transpileOnly ./src/server.ts",
+    "build": "tsc",
     "start": "nodemon -e js,graphql -x node src/index.ts",
     "dev": "nodemon -e js,graphql -x node --inspect src/index.ts",
     "test": "jest",

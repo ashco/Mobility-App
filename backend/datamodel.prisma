@@ -1,3 +1,6 @@
+# This is for Prisma and our backend.
+# This file determines how ./src/generated/prisma.graphql will be generated.
+
 type User {
   id: ID! @id
   name: String!

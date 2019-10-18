@@ -1,4 +1,8 @@
-﻿type Mutation {
+﻿# import * from './generated/prisma.graphql'
+
+# Public facing API
+
+type Mutation {
   hi: String
 }
 
