@@ -1,13 +1,19 @@
-﻿import { ApolloProvider } from "react-apollo";
+﻿import App from "next/app";
+// import { ApolloProvider } from "react-apollo";
+import { ApolloProvider } from "@apollo/react-hooks";
 import withApollo from "../lib/withApollo";
 // import withData from "../lib/withData";
-
-import App from "next/app";
 import Page from "../components/Page";
+
+import { ApolloClient } from "apollo-boost";
 
 // type MyProps = { apollo: object };
 
-class MyApp extends App {
+interface Props {
+  apollo: ApolloClient<{}>;
+}
+
+class MyApp extends App<Props> {
   static async getInitialProps({ Component, ctx }) {
     interface LooseObject {
       // [key: string]: any;

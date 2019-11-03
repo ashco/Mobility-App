@@ -18,13 +18,14 @@
 // }
 // export default withApollo(createClient);
 
-import withApollo from 'next-with-apollo';
-import ApolloClient, { InMemoryCache } from 'apollo-boost';
-import { GRAPHQL_URL } from '../config';
+import withApollo from "next-with-apollo";
+import ApolloClient, { InMemoryCache } from "apollo-boost";
+import { GRAPHQL_URL } from "../config";
 
 export default withApollo(
-  ({ ctx, headers, initialState }) => new ApolloClient({
-    uri: GRAPHQL_URL,
-    cache: new InMemoryCache().restore(initialState || {}),
-  }),
+  ({ ctx, headers, initialState }) =>
+    new ApolloClient({
+      uri: GRAPHQL_URL,
+      cache: new InMemoryCache().restore(initialState || {})
+    })
 );
