@@ -13,7 +13,7 @@
     "deploy": "prisma deploy --env-file .env"
   },
   "repository": {
-    "url": "https://ashco.io"
+    "url": "https://ashchristie.dev"
   },
   "babel": {
     "presets": [
