@@ -1,36 +1,38 @@
 ﻿import Link from "next/link";
 import styled from "styled-components";
 
-import NavButton from "./Buttons/NavButton";
+import NavLinkStyle from "./NavLinkStyle";
 import ExercisesIcon from "./Icons/Exercises";
 import PrescriptionsIcon from "./Icons/Prescriptions";
 import CalendarIcon from "./Icons/Calendar";
 
-const Nav = () => (
-  <NavWrapper>
-    <Link href="/exercises">
-      <a>
-        <NavButton>
+import { useRouter } from "next/router";
+
+const Nav = () => {
+  const router = useRouter();
+
+  const { pathname } = router;
+  console.log(pathname);
+  return (
+    <NavWrapper>
+      <Link href="/exercises">
+        <NavLinkStyle active={pathname === "/exercises"}>
           <ExercisesIcon />
-        </NavButton>
-      </a>
-    </Link>
-    <Link href="/prescriptions">
-      <a>
-        <NavButton>
+        </NavLinkStyle>
+      </Link>
+      <Link href="/prescriptions">
+        <NavLinkStyle active={pathname === "/prescriptions"}>
           <PrescriptionsIcon />
-        </NavButton>
-      </a>
-    </Link>
-    <Link href="/calendar">
-      <a>
-        <NavButton>
+        </NavLinkStyle>
+      </Link>
+      <Link href="/calendar">
+        <NavLinkStyle active={pathname === "/calendar"}>
           <CalendarIcon />
-        </NavButton>
-      </a>
-    </Link>
-  </NavWrapper>
-);
+        </NavLinkStyle>
+      </Link>
+    </NavWrapper>
+  );
+};
 
 const NavWrapper = styled.nav`
   display: flex;
@@ -38,9 +40,19 @@ const NavWrapper = styled.nav`
   justify-content: center;
   background: #464646;
   a {
-    color: #fff;
+    /* color: #fff;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; */
   }
+  /* a:after {
+    content: ".";
+    color: #fff;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 0;
+  } */
 `;
 
 export default Nav;

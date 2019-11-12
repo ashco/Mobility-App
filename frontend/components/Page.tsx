@@ -4,6 +4,7 @@ import styled, { ThemeProvider } from "styled-components";
 import GlobalStyle from "./styles/GlobalStyle";
 import Meta from "./Meta";
 import Header from "./Header";
+// // import SelectRow from "./SelectRow";
 import Nav from "./Nav";
 
 const theme = {
@@ -40,6 +41,7 @@ class Page extends Component {
           <Meta />
           <Header />
           <Inner>{this.props.children}</Inner>
+          {/* <SelectRow /> */}
           <Nav />
         </StyledPage>
       </ThemeProvider>
