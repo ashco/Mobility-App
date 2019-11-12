@@ -1,5 +1,6 @@
 ﻿import Router from "next/router";
 import NProgress from "nprogress";
+import styled from "styled-components";
 
 // Handle loading progress bar
 Router.events.on("routeChangeStart", url => {
@@ -15,9 +16,11 @@ Router.events.on("routeChangeError", url => {
 });
 
 const Header = () => (
-  <div>
+  <HeaderWrapper>
     <a href="/">Header</a>
-  </div>
+  </HeaderWrapper>
 );
+
+const HeaderWrapper = styled.header``;
 
 export default Header;

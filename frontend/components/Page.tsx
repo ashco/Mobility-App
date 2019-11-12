@@ -19,12 +19,16 @@ const theme = {
 const StyledPage = styled.div`
   background: white;
   color: ${props => props.theme.black};
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 80px auto 80px;
 `;
 
 const Inner = styled.div`
   max-width: ${props => props.theme.maxWidth};
   margin: 0 auto;
   padding: 2rem;
+  height: auto;
 `;
 
 class Page extends Component {

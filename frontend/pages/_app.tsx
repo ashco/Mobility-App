@@ -35,7 +35,7 @@ class MyApp extends App<Props> {
     return (
       <ApolloProvider client={apollo}>
         <Page>
-          <Component />
+          <Component {...pageProps} />
         </Page>
       </ApolloProvider>
     );
