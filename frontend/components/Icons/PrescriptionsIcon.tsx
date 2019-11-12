@@ -1,6 +1,6 @@
 ﻿import React from "react";
 
-const Prescriptions = () => (
+const PrescriptionsIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="40"
@@ -15,4 +15,4 @@ const Prescriptions = () => (
   </svg>
 );
 
-export default Prescriptions;
+export default PrescriptionsIcon;

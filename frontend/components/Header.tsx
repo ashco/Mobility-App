@@ -3,7 +3,7 @@ import NProgress from "nprogress";
 import styled from "styled-components";
 
 import SearchButtonStyle from "./Buttons/SearchButton";
-import SearchIcon from "./Icons/Search";
+import SearchIcon from "./Icons/SearchIcon";
 
 // Handle loading progress bar
 Router.events.on("routeChangeStart", url => {

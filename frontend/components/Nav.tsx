@@ -2,17 +2,16 @@
 import styled from "styled-components";
 
 import NavLinkStyle from "./NavLinkStyle";
-import ExercisesIcon from "./Icons/Exercises";
-import PrescriptionsIcon from "./Icons/Prescriptions";
-import CalendarIcon from "./Icons/Calendar";
+import ExercisesIcon from "./Icons/ExercisesIcon";
+import PrescriptionsIcon from "./Icons/PrescriptionsIcon";
+import CalendarIcon from "./Icons/CalendarIcon";
 
 import { useRouter } from "next/router";
 
 const Nav = () => {
   const router = useRouter();
-
   const { pathname } = router;
-  console.log(pathname);
+
   return (
     <NavWrapper>
       <Link href="/exercises">
@@ -39,20 +38,6 @@ const NavWrapper = styled.nav`
   align-items: center;
   justify-content: center;
   background: #464646;
-  a {
-    /* color: #fff;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center; */
-  }
-  /* a:after {
-    content: ".";
-    color: #fff;
-    font-weight: bold;
-    font-size: 28px;
-    line-height: 0;
-  } */
 `;
 
 export default Nav;

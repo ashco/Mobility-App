@@ -1,6 +1,6 @@
 ﻿import React from "react";
 
-const Calendar = () => (
+const CalendarIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="36"
@@ -12,4 +12,4 @@ const Calendar = () => (
   </svg>
 );
 
-export default Calendar;
+export default CalendarIcon;
